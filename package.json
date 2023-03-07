@@ -20,5 +20,11 @@
     "url": "https://github.com/RodolfoSchmidt/PokeApi/issues"
   },
   "homepage": "https://github.com/RodolfoSchmidt/PokeApi#readme",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "standard": "^17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
 }
