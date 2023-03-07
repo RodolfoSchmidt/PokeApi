@@ -1,8 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aquí podrás buscar a tu pokemón favorito y obtener información sobre él"
+    />
+    <meta name="keywords" content="pokemon, pokedex, poke Api" />
+    <meta name="lenguage" content="ES" />
+    <meta name="author" content="Rodolfo Schmidt" />
+    <title>Poke Busqueda</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      integrity="sha512-YIwCZh1f48EYm8V7r2mX/uNUV7mdoLZnzO5ZjAezOwz0PHB8jN6Mwe0gl0N+t1NztS6jZXUZ0zCrwtwAVeJNOQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
@@ -97,31 +114,58 @@
       <div
         class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8"
       >
-        <h2 class="text-2xl font-extrabold tracking-tight text-red-600">
+        <h2
+          class="text-2xl font-extrabold tracking-tight text-red-600 text-center"
+        >
           Tu pokemon aquí
         </h2>
 
-        <button
-          class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-        >
-          Buscar
-        </button>
         <div
-          class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
+          class="max-w-xl w-full bg-white shadow-lg rounded-lg overflow-hidden mx-auto"
         >
           <!-- content -->
-          <div class="group relative">
-            <div
-              class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none"
-            >
-              <img src="" alt="" class="w-full" />
+          <div
+            class="max-w-sm mx-auto bg-white rounded-xl shadow-md overflow-hidden"
+          >
+            <div class="md:flex">
+              <div class="md:flex-shrink-0">
+                <img
+                  id="pokemon-image"
+                  class="h-48 w-full object-cover md:w-100"
+                  src="./img/buscarimg.png"
+                  alt="Imagen del Pokemon"
+                />
+              </div>
+              <div class="p-8">
+                <div
+                  class="uppercase tracking-wide text-sm text-red-500 font-semibold"
+                  id="pokemon-name"
+                ></div>
+                <div
+                  class="block mt-1 text-lg leading-tight font-medium text-black"
+                  id="pokemon-id"
+                ></div>
+                <div class="mt-2 text-gray-600" id="pokemon-type"></div>
+              </div>
             </div>
-            <div class="mt-4 flex justify-between">
-              <h3 class="text-sm text-gray-700">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                title
-              </h3>
-            </div>
+            <form class="p-8" id="form">
+              <label class="block text-red-700 font-bold mb-2" for="search"
+                >Buscar Pokemon</label
+              >
+              <input
+                class="border border-gray-400 p-2 mb-4 w-full"
+                type="text"
+                id="search"
+                name="search"
+                placeholder="Ingresa el nombre del Pokemon"
+              />
+              <button
+                class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                type="submit"
+              >
+                Buscar
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -133,7 +177,7 @@
         <h2
           class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
         >
-          <span class="block">Contact</span>
+          <span class="block">Contactame</span>
           <span class="block text-red-600">keep in touch.</span>
         </h2>
         <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
@@ -191,5 +235,6 @@
         </div>
       </div>
     </div>
+    <script src="./asset/index.js"></script>
   </body>
 </html>
